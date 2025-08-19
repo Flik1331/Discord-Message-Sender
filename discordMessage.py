@@ -29,9 +29,9 @@ def message_text(webhook, txt):
 def message_delay(message, webhook, txt):
         
         delay = input("Delay:")
-        moro(message, webhook, delay, txt)
+        delay(message, webhook, delay, txt)
 
-def moro(message, webhook, delay, txt):
+def delay(message, webhook, delay, txt):
     x = 0
     while x < int(txt): 
         send_message(message, webhook)
@@ -44,3 +44,4 @@ def send_message(message, webhook):
         requests.post(webhook, json=data)
 
 amount_messages()
+
